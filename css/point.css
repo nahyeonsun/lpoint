@@ -1,0 +1,22 @@
+main{
+  padding\ top: 0;
+}
+section:nth-child(odd){
+  background-color: #eee;
+}
+section#point{
+  background-color: #ffca00;
+}
+section#point .wrap{
+
+}
+section#point .wrap>*{
+  transform: translateX(50%);
+  margin-left: 70px;
+}
+section#point .wrap h2{   
+  font-size: 36px;
+}
+section#point .wrap p{   
+  font-size: 14px;
+}
