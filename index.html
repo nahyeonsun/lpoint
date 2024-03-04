@@ -47,17 +47,33 @@
                 $("header div.wrap .sublist").removeClass("show");
 
             });
-            //aside 첫번쨰 li에 클래스를 붙이시오(active)
-            $("aside ul li:nth-child(1)").addClass("active");
-            //aside 강조
-            //aside 항목 list를 클릭하면 실행하시오
-            $("aside ul li").click(function(){
-                //클릭한 li에 클래스를 붙이시오
-                $(this).addClass("active");
-                //클릭한 li가 아닌 다른 형제요소들에 클래스를 없애시오
-                $(this).siblings().removeClass("active");
+            $("footer a.top").click(function(){
+                $("html,body").animate({scrollTop:"0px"},500);
                 return false;
             });
+            $(window).scroll(function(){
+                if($(window).scrollTop()<$("#title").height()){ 
+                    $("aside ul li:nth-child(1) a").addClass("currentB");
+                    $("aside ul li a").not("aside ul li:nth-child(1) a").removeClass("currentB currentW currentN");
+                }
+                if($(window).scrollTop()>=$("#title").height()){ 
+                    $("aside ul li:nth-child(2) a").addClass("currentW");
+                    $("aside ul li a").not("aside ul li:nth-child(2) a").removeClass("currentB currentW currentN");
+                }
+                if($(window).scrollTop()>=$("#title").height()+$("#point").height()){ 
+                    $("aside ul li:nth-child(3) a").addClass("currentW");
+                    $("aside ul li a").not("aside ul li:nth-child(3) a").removeClass("currentB currentW currentN");
+                }
+                if($(window).scrollTop()>=$("#title").height()+$("#point").height()+$("#mission").height()){ 
+                    $("aside ul li:nth-child(4) a").addClass("currentB");
+                    $("aside ul li a").not("aside ul li:nth-child(4) a").removeClass("currentB currentW currentN");
+                }
+                if($(window).scrollTop()>=$("#title").height()+$("#point").height()+$("#mission").height()+$("#benefit").height()){ 
+                    $("aside").addClass("currentN");
+                }
+            });
+
+ 
         });
     </script>
 </head>
@@ -159,7 +175,7 @@
     <!-- 우측슬라이드아이콘 -->
     <aside>
         <ul>
-            <li><a href="" class="eng">point</a></li>
+            <li><a href="" class="eng currentB">point</a></li>
             <li><a href="">mission </a></li>
             <li><a href="">benefit</a></li>
             <li><a href="">download</a></li>
