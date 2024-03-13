@@ -18,6 +18,14 @@ section#download .wrap h2{
 section#download .wrap a{
   color: #009bfa;
  }
+section#download .wrap a::after{
+  content: "";
+  background: url(../img/more.svg);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: -2px;
+}
 section#download .wrap img{
   grid-column: 2;
   grid-row: 1 / span 3;

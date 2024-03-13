@@ -5,7 +5,7 @@ header {
   padding: 0 !important;
   height: 100px;
   display: flex;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #e0e0e0;
   box-sizing: border-box;
   position: fixed;
   width: 100%;
@@ -73,11 +73,10 @@ header div.wrap .sublist{
   top: 100px;
   width: 100%;
   padding: 40px 0 70px;
-  background-color: #eee;
+  background-color: #fff;
   display: grid;
   grid-template-columns: calc((100% - 1080px) / 2) 310px auto;
-  display: none;
-  transition: 0.5s;
+  /*! display: none; */
 }
 header div.wrap .sublist h2{
 
@@ -91,6 +90,7 @@ header div.wrap .sublist ul li{
 header div.wrap .sublist ul li a{ 
   line-height: 1.7;
   display: block;
+  color: #474747;
 }
 header div.wrap ul.lang {  
  gap: 15px;
@@ -100,8 +100,8 @@ header div.wrap  ul.lang li {
 }
 header div.wrap  ul.lang li a {
   padding: 10px 0;
+  color: #555;
 }
-
 header div.wrap  ul.lang li:nth-child(1) {
   
 }

@@ -14,7 +14,7 @@
  position: absolute;
  left: 0;
  bottom: 0; 
- background-color: #32aefa;
+ background-color: #0d8fdfc9;
  border-radius: 0 140px 0 0;
  animation-name: leftS;
  animation-duration: 1s;
@@ -51,10 +51,32 @@
   background-position-y: bottom;
   background-size: contain;
   width: 244px;
-  height: 354px;
+  height: 300px;
   display: block;
   position: absolute;
-  left: 52%;
+  left: 51%;
+  bottom: 0;
+  z-index: 1;
+  animation-name: slideup;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+  animation-timing-function: ease-in;
+  animation-delay: 1s;
+  transform: translateY(100%);
+  animation-fill-mode: forwards;
+}
+#title>a::after{
+  content: "";
+  background-image: url(../img/main.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: contain;
+  width: 290px;
+  height: 480px;
+  display: block;
+  position: absolute;
+  left: 29%;
   bottom: 0;
   z-index: 1;
   animation-name: slideup;
@@ -91,10 +113,11 @@
 }
 #title .wrap  h2{  
   text-align: center;
-  font-size: 36px;
+  font-size: 60px;
 }
 #title .wrap  p { 
-  font-size: 14px;
+  font-size: 18px;
+  color: #6a6a6a;
 }
 #title::after{
  content: ""; 
@@ -104,7 +127,7 @@
  position: absolute;
  right: 0;
  bottom: 0; 
- background-color: #3356b0;
+ background-color: #053da8cc;
  border-radius: 140px 0 0 0;
  animation-name: rightS;
  animation-duration: 1s;

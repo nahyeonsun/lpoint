@@ -33,14 +33,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-            $("header div.wrap ul.gnb li").hover(
-                function(){
-                    $("header div.wrap .sublist").addClass("show").hide().fadeIn(1000);
-                },
-                function(){
-                    //$("header div.wrap .sublist").removeClass("show");
-                }
-            );
+            $("header div.wrap ul.gnb li").hover(function(){
+                    //$("header div.wrap .sublist").addClass("show").hide().fadeIn(1000);
+                    $("header div.wrap ul.gnb li a").hover(function(){
+                        $("header div.wrap .sublist").stop().slideDown();
+                    });
+                    $("header div.wrap .sublist").mouseleave(function(){
+                        $(this).slideUp();
+                    });
+            });
             // sublist에서 벗어나면 실행하시오(mouseleave)
             $("header div.wrap .sublist").mouseleave(function(){
                 //sublist에 클래스를 없애시오

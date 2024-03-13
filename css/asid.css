@@ -7,7 +7,7 @@ aside ul{
 
 }
 aside ul li:not(last-child){
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 aside ul li a{   
   font-size: 0;
